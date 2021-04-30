@@ -1,17 +1,18 @@
-import json, toml
+import toml, tkinter
+
+# Toss this in its own file along with other file io helper functions
+def OpenCharacter(path):
+  character_file = open(path, "r")
+  character = toml.loads(character_file.read())
+  character_file.close()
+  return character
 
 
+# This should be a list at some point
+x = OpenCharacter("character.toml")
 
-## Players should be saved as toml because I like toml more than json
-y = open("character.toml", "r")
-x = toml.loads(y.read())
-print(x)
-
-
-import tkinter as tk
-window = tk.Tk()
-greeting = tk.Label(text=x["name"]["title"])
+window = tkinter.Tk()
+greeting = tkinter.Label(text=x["name"]["title"])
 greeting.pack()
-
 
 window.mainloop()
