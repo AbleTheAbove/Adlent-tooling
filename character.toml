@@ -5,8 +5,26 @@ middle = ""
 last = ""
 
 [stats]
-# Stats go here idk rn
+[stats.core]
+intelligence= 0
+strength= 0
+speed= 0
+aura= 0 # Used to boost your magic skills, as most magic includes this stat or derived stats 
+focus= 0 # Focus acts as a general measure of your focus on something
 
-[possesions] # Use item id
+[stats.derived]
+recharge = 0
+resistance = 0
+
+[stats.research] # Used to show a rough estimate of how long you have researched each branch of Magic
+arcane=0
+artificing=	0
+biomancy=	0
+demonancy= 0
+druidic= 0
+elementalist= 0	
+necromancy= 0
+
+[possesions] # Use item id, for multiple occurances just use the id that number of times
 armour = []
 inventory = []
